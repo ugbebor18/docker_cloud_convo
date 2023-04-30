@@ -1,5 +1,4 @@
-#<h1> Cyril Ossai DevOpsBasics Project... </h1>
-#<h2> The second Best way to Learn QA Automation tools + Devops Tools CI/CD pipelines in this course from Scratch</h2>
+#<h1> CloudConvo DevOps Project... </h1>
 #<h2> Also Merci!!! Good Luck and we are almost done with the course.Wow!!!!!!Bye for now Thankyou....</h2>
 
 <html>
@@ -7,7 +6,7 @@
     <title>Welcome to my web page</title>
   </head>
   <body bgcolor="#7FFF00">
-    <h1>Hello from RealCloud & DevOps Expert Again</h1>
+    <h1>Hello from CloudConvo Again</h1>
     <!--Form declaration. Must have an action attribute -->
         <form action="C:/JonnyJava/FirstJava.html/profile.html" method="post">
             <p>Let us learn something about your music lifestyle </p> <!--This control is for mutplie line comment-->
