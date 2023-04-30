@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-       imagename = "tkibnyusuf/newcustom"
+       imagename = "tkibnyusuf/customizetomcatimage"
        registryCredential = 'DockerHub'
        dockerImage = ''
            }
@@ -46,8 +46,6 @@ pipeline {
               sh "docker rmi $imagename:$BUILD_NUMBER"
               sh "docker rmi $imagename:latest"
                         }
-            }
-           
+            }  
    }
 }
-
