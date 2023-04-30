@@ -2,14 +2,10 @@ pipeline {
   agent any
 
   environment {
-       imagename = "seewhy007/awesome"
+       imagename = "tkibnyusuf/newcustom"
        registryCredential = 'DockerHub'
        dockerImage = ''
            }
-
-  tools {
-    maven 'maven' 
-       }
 
   stages {
 
@@ -51,20 +47,7 @@ pipeline {
               sh "docker rmi $imagename:latest"
                         }
             }
-    
-    stage ('Deploy To Tomcat Server') {
-      steps{
-        script {
-         deploy adapters: [tomcat9(credentialsId: 'Tomcat_keys', path: '', url: 'http://3.144.216.115:8080/')], contextPath: 'webapp', war: '**/*.war'
-           }
-       }
-   }
-   
-    stage('Deploy to QA') {
-            steps {
-                echo 'Deploy to Tomcat'
-            }
-        }        
+           
    }
 }
 
