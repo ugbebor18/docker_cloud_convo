@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-       imagename = "tkibnyusuf/customizetomcatimage"
+       imagename = "ugbebor188/customizetomcatimage"
        registryCredential = 'DockerHub'
        dockerImage = ''
            }
