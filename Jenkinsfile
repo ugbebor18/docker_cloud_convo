@@ -3,10 +3,11 @@ pipeline {
 
   environment {
        imagename = "ugbebor188/customizetomcatimage"
-       registryCredential = 'dockerhub'
+       registryCredential = 'DockerHub'
        dockerImage = ''
            }
 
+  
   stages {
 
     stage ('Build') {
@@ -23,7 +24,7 @@ pipeline {
             }
         }
     
-    stage('Build Docker image') {
+      stage('Build Docker image') {
           steps{
                 script {
                    dockerImage = docker.build imagename + ":$BUILD_NUMBER"
@@ -36,7 +37,6 @@ pipeline {
                script {
                     docker.withRegistry( '', registryCredential ) {
                     dockerImage.push("$BUILD_NUMBER")
-                    dockerImage.push('latest')
                                               }
                                     }
                              }
@@ -44,7 +44,6 @@ pipeline {
      stage('Remove Unused docker image') {
           steps{
               sh "docker rmi $imagename:$BUILD_NUMBER"
-              sh "docker rmi $imagename:latest"
                         }
             }  
    }
