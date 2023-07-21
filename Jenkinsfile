@@ -3,7 +3,7 @@ pipeline {
 
   environment {
        imagename = "ugbebor188/customizetomcatimage"
-       registryCredential = 'ugbebordocker'
+       registryCredential = 'docker_id'
        dockerImage = ''
            }
 
